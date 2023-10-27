@@ -1,0 +1,94 @@
+TEST DISPLAYINFO FUNCTION{
+
+T1:
+Input: 1, 10001
+
+Output:
+Polling Stations : 220
+Valid Ballots : 42086
+Total Ballots Cast : 42248
+Percentage of Voter Turnout : 61.7
+
+T2:
+
+Input: 1, 12345
+Output:invalid input
+
+}
+
+TEST UNIQUEDISTRICTS FUNCTION{
+
+T1:
+Input:2,Saskatchewan
+Output: ['Battlefords--Lloydminster', 'Carlton Trail--Eagle Creek/Sentier Carlton--Eagle Creek', 'Cypress Hills--Grasslands', 'DesnethÃ©--Missinippi--Churchill River/DesnethÃ©--Missinippi--RiviÃ¨re Churchill', 'Moose Jaw--Lake Centre--Lanigan', 'Prince Albert', 'Regina--Lewvan', "Regina--Qu'Appelle", 'Regina--Wascana', 'Saskatoon West/Saskatoon-Ouest', 'Saskatoon--Grasswood', 'Saskatoon--University', 'Souris--Moose Mountain', 'Yorkton--Melville']
+
+T2: 2, California
+Output: invalid input
+
+}
+TEST FINDMIN{
+
+T1:
+Input: 3,Total Ballots Cast,min
+Output:('12023', "district number:['62001']")
+
+T2:
+Input: 3, Testing, min
+
+Output:
+ERROR INVALID STAT NAME CHECK SPELLING
+None
+
+T3:
+Input: 3, Total Ballots Cast, test
+Output:invalid input
+
+}
+
+TEST FINDMAX{
+T1:
+Input: 3,Total Ballots Cast,min
+Output:('78260', "district number:['35076']")
+
+T2:
+Input: 3, Testing, min
+
+Output:
+ERROR INVALID STAT NAME CHECK SPELLING
+None
+
+T3:
+Input: 3, Total Ballots Cast, test
+Output:invalid input
+
+}
+TEST SELECTIONSORT{
+
+T1:
+Input:4,Total Ballots Cast
+Output:
+
+[{'Province': 'Nunavut', 'Electoral District Name': 'Nunavut', 'Electoral District Number': '62001', 'Population': '31906', 'Electors': '20252', 'Polling Stations': '59', 'Valid Ballots': '11928', 'Percentage of Valid Ballots': '99.2', 'Rejected Ballots/': '95', 'Percentage of Rejected Ballots': '0.8', 'Total Ballots Cast': '12023', 'Percentage of Voter Turnout': '59.4'}, {'Province': 'Newfoundland and Labrador/Terre-Neuve-et-Labrador', 'Electoral District Name': 'Labrador', 'Electoral District Number': '10004', 'Population': '26728', 'Electors': '20045', 'Polling Stations': '84', 'Valid Ballots': '12373', 'Percentage of Valid Ballots': '99.6', 'Rejected Ballots/': '53', 'Percentage of Rejected Ballots': '0.4', 'Total Ballots Cast': '12426', 'Percentage of Voter Turnout': '62'}, {'Province': 'Northwest Territories/Territoires du Nord-Ouest', 'Electoral District Name': 'Northwest Territories/Territoires du Nord-Ouest', 'Electoral District Number': '61001', 'Population': '41462', 'Electors': '30110', 'Polling Stations': '91', 'Valid Ballots': '18973', 'Percentage of Valid Ballots': '99.5', 'Rejected Ballots/': '104', 'Percentage of Rejected Ballots': '0.5', 'Total Ballots Cast': '19077', 'Percentage of Voter Turnout': '63.4'}, {'Province': 'Yukon', 'Electoral District Name': 'Yukon', 'Electoral District Number': '60001', 'Population': '33897', 'Electors': '26879', 'Polling Stations': '82', 'Valid Ballots': '20291', 'Percentage of Valid Ballots': '99.5', 'Rejected Ballots/': '94', 'Percentage of Rejected Ballots': '0.5', 'Total Ballots Cast': '20385', 'Percentage of Voter Turnout': '75.8'}, {'Province': 'Prince Edward Island/ÃŽle-du-Prince-Ã‰douard', 'Electoral District Name': 'Charlottetown', 'Electoral District Number': '11002', 'Population': '34562', 'Electors': '28129', 'Polling Stations': '82', 'Valid Ballots': '21165', 'Percentage of Valid Ballots': '99.5', 'Rejected Ballots/': '99', 'Percentage of Rejected Ballots': '0.5', 'Total Ballots Cast': '21264', 'Percentage of Voter Turnout': '75.6'}, {'Province': 'Prince Edward Island/ÃŽle-du-Prince-Ã‰douard', 'Electoral District Name': 'Egmont', 'Electoral District Number': '11003', 'Population': '34598', 'Electors': '27858', 'Polling Stations': '86', 'Valid Ballots': '21362', 'Percentage of Valid Ballots': '99.6', 'Rejected Ballots/': '87', 'Percentage of Rejected Ballots': '0.4', 'Total Ballots Cast': '21449', 'Percentage of Voter Turnout': '77'}, {'Province': 'Prince Edward Island/ÃŽle-du-Prince-Ã‰douard', 'Electoral District Name': 'Malpeque', 'Electoral District Number': '11004', 'Population': '35039', 'Electors': '28629', 'Polling Stations': '81', 'Valid Ballots': '22472', 'Percentage of Valid Ballots': '99.5', 'Rejected Ballots/': '102', 'Percentage of Rejected Ballots': '0.5', 'Total Ballots Cast': '22574', 'Percentage of Voter Turnout': '78.9'}, ...........
+
+'''' ONLY SHOWS THE FIRST BIT OF SORTED DATA IN ODER TO SAVE SPACE'''''
+
+T2:
+Input: 4, testing
+Output:
+
+ERROR INVALID STAT NAME CHECK SPELLING
+None
+
+}
+TEST BINARY SEARCH{
+T1:
+Input:5,10001
+Output:
+
+percentage of voter turnout:61.7%
+
+T2:
+Input:5,12345678
+Output:NOT FOUND
+
+}

@@ -1,0 +1,61 @@
+Test 1
+friendship.txt:
+Michael Amy
+Anna Max
+Aiden Anna
+John Michael
+Max Aiden
+Amy Anna
+John Alice
+Alice Anna
+Max Michael
+Mia Amy
+Aiden Mia
+Lucas Max
+Mia Lucas
+
+Output:
+Michael has 4 friends (Amy, John, Max, Mia)
+Amy has 3 friends (Anna, Michael, Mia)
+Anna has 7 friends (Aiden, Alice, Amy, John, Max, Mia, Lucas)
+Aiden has 3 friends (Anna, Lucas, Mia)
+John has 2 friends (Alice, Michael)
+Max has 5 friends (Anna, Aiden, Michael, Mia, Lucas)
+Alice has 1 friend (Anna)
+Mia has 4 friends (Amy, Aiden, Lucas, Michael)
+Lucas has 3 friends (Max, Mia, Anna)
+
+-Test2:
+friendship.txt:
+Michael Amy
+Michael John
+Michael Max
+Michael Anna
+
+Output:
+Michael has 4 friends (Amy, John, Max, Anna)
+Amy has 1 friend (Michael)
+John has 1 friend (Michael)
+Max has 1 friend (Michael)
+Anna has 1 friend (Michael)
+
+-Test3:
+friendship.txt:
+John Max
+John Anna
+Max Anna
+
+Output:
+John has 2 friends (Max, Anna)
+Max has 2 friends (John, Anna)
+Anna has 2 friends (John, Max)
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''
+Test 4 was performed to see how the code handles a large friend list with multiple relationships, and to see if the code can handle overlapping relationships.
+
+Test 5 was performed to see if the code can handle cases where a person has many friends.
+
+Test 6 was performed to see if the code can handle a small and simple friend list.
+
+
+

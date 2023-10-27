@@ -1,0 +1,85 @@
+FUNCTION: primeify
+
+TEST 1
+Input: primeify("TESTING")
+Expected output: 62463943421
+Output: 62463943421
+
+This is done to test the basic functions of the code when input is entered correctly.
+
+TEST 2
+Input: primeify("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+Expected output: 232862364358497360900063316880507363070
+Output:232862364358497360900063316880507363070
+
+
+This is done to test the maximum length of input that the code can handle.
+
+TEST 3
+Input: primeify("TEST")
+Expected output: 3715217
+Output: 3715217
+
+This is done to test the functionality of the code with a shorter input.
+
+TEST 4
+Input: primeify("")
+Expected output: ValueError
+Output: ValueError: my_char must be a single character string
+
+This is done to test if the code can handle empty string input and raise a ValueError.
+
+
+
+FUNCTION: is_anagram
+
+TEST 1
+Input: is_anagram("DOG","GOD")
+Expected output: These are anagrams
+Output: These are anagrams
+
+This is done to test if the code can identify if two given strings are anagrams.
+
+TEST 2
+Input: is_anagram("ABCD","EFGH")
+Expected output: These are not anagrams
+Output: These are not anagrams
+
+This is done to test if the code can identify if two given strings are not anagrams.
+
+TEST 3
+Input: is_anagram("", "dog")
+Expected output: ValueError
+Output: ValueError: Input strings cannot be empty
+
+This is done to test if the code can handle empty and not upper case string input and raise a ValueError.
+
+FUNCTION: radixSort
+
+TEST 1
+Input: radixSort([1,6,3,8,2,9])
+Expected output: [1,2,3,6,8,9]
+Output: [1,2,3,6,8,9]
+
+This is done to test the basic functionality of the code when given a list of integers.
+
+TEST 2
+Input: radixSort([10,100,1000,2,22,222])
+Expected output: [2, 10, 22, 222, 100, 1000]
+Output: [2, 10, 22, 222, 100, 1000]
+
+This is done to test the functionality of the code with a list of integers with different digits.
+
+TEST 3
+Input: radixSort([5,4,3,2,1])
+Expected output: [1,2,3,4,5]
+Output: [1,2,3,4,5]
+
+This is done to test the functionality of the code with a list of integers in reverse order.
+
+TEST 4
+Input: radixSort([1,2,"3",4,5])
+Expected output: TypeError
+Output: TypeError: counting() argument after * must be an iterable, not int
+
+This is done to test if the code can handle input with non-integer elements and raise a TypeError.

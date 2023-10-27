@@ -1,0 +1,152 @@
+Q1
+----------------
+Test 1 (Room creation, Guest Creation, Service Creation)
+
+Input:
+
+Create Rooms
+room1 = Standard(101)
+room2 = Suite(201)
+room3 = TaylorSuite(301)
+
+Create Guests
+guest1 = Guest("John Doe",(2023,4,1))
+guest2 = Guest("Jane Smith",(2023,4,3))
+
+Create Services
+service1 = Service("Room Service", 50)
+service2 = Service("Laundry", 20)
+
+Output:
+No output, but objects are created successfully.
+
+Test 2 (Room availability, Status/Date)
+
+Input:
+
+Check room availability and status/date
+print(f"Room {room1.room_number} availability: {room1.avaliablitystat}")
+print(f"Room {room2.room_number} availability: {room2.avaliablitystat}")
+print(f"Room {room3.room_number} availability: {room3.avaliablitystat}")
+
+print(f"Guest {guest1.name} checkout date: {guest1.checkout}")
+print(f"Guest {guest2.name} checkout date: {guest2.checkout}")
+
+Output:
+Room 101 availability: True
+Room 201 availability: True
+Room 301 availability: True
+
+Guest John Doe checkout date: 2023-04-01
+Guest Jane Smith checkout date: 2023-04-03
+
+
+Test 3 (Guest Check in)
+Input:
+room1.guest_check_in(guest1)
+print(f"Room {room1.room_number} is available: {room1.avaliablitystat}")
+print(f"Room {room1.room_number} will be available after {room1.avaliable}")
+print(room1.guest.name)
+print(room1.guest.checkout)
+
+Output:
+Room 101 is available: False
+Room 101 will be available after 2023-04-01
+John Doe
+2023-04-01
+
+Test 4 (Service adding, Total Bill)
+
+Input:
+
+Check total bill after adding services
+guest1.add_service(service1)
+guest1.add_service(service2)
+guest1.send_bill()
+
+Output:
+Guest Name: John Doe
+Services:
+Room Service: $50
+Laundry: $20
+Total Bill: $70
+
+
+
+Q2
+-----------------------
+Test 1
+
+Input:
+s = Stack()
+
+# Push some items onto the stack
+s.push(1)
+s.push(2)
+s.push(3)
+s.push(4)
+
+# Print the original stack
+print("Original stack:", s)
+
+# Reverse the stack
+s.reverse()
+
+Output
+Original stack: [1, 2, 3, 4]
+reversed: [4, 3, 2, 1]
+
+This tests basic functionality
+
+Test 2
+
+Input:
+s = Stack()
+
+# Push some items onto the stack
+s.push("A")
+s.push("B")
+s.push("C")
+s.push("D")
+
+# Print the original stack
+print("Original stack:", s)
+
+# Reverse the stack
+s.reverse()
+
+Output
+Original stack: ['A', 'B', 'C', 'D']
+reversed: ['D', 'C', 'B', 'A']
+
+Tests for strings
+
+Test 3
+from stack_classes import *
+# Create a new stack
+s = Stack()
+
+# Push some items onto the stack
+s.push("A")
+s.push("B")
+s.push("C")
+s.push("D")
+s.push("1")
+s.push("3")
+s.push(2)
+s.push("9")
+s.push("12")
+s.push(12)
+# Print the original stack
+print("Original stack:", s)
+
+# Reverse the stack
+s.reverse()
+
+Output:
+
+Original stack: ['A', 'B', 'C', 'D', '1', '3', 2, '9', '12', 12]
+reversed: [12, '12', '9', 2, '3', '1', 'D', 'C', 'B', 'A']
+
+Test for a mix of int and str and tests for larger stacks
+
